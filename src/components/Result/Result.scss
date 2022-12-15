@@ -1,0 +1,17 @@
+.result {
+  max-width: 280px;
+  display: flex;
+  height: 24px;
+  .position {
+    width: 24px;
+    text-align: end;
+  }
+
+  .code {
+    margin-left: 24px;
+  }
+
+  .time {
+    margin-left: auto;
+  }
+}

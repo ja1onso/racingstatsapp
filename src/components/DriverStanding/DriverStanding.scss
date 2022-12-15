@@ -1,0 +1,65 @@
+.driverStanding {
+  display: flex;
+  align-items: center;
+  font-size: 9px;
+  max-width: 240px;
+  height: 32px;
+  .team {
+    height: 100%;
+    width: 6px;
+    &.alfa {
+      background-color: #c92d4b;
+    }
+    &.alphatauri {
+      background-color: #5e8faa;
+    }
+    &.alpine {
+      background-color: #2293d1;
+    }
+    &.aston_martin {
+      background-color: #358c75;
+    }
+    &.ferrari {
+      background-color: #f91536;
+    }
+    &.haas {
+      background-color: #b6babd;
+    }
+    &.mclaren {
+      background-color: #f58020;
+    }
+    &.mercedes {
+      background-color: #6cd3bf;
+    }
+    &.red_bull {
+      background-color: #3671c6;
+    }
+    &.williams {
+      background-color: #37bedd;
+    }
+  }
+  .wrapper {
+    margin-left: 8px;
+    .position {
+      margin-right: 4px;
+    }
+    .givenName {
+      font-family: RobotoBold;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+  }
+  .time {
+    margin-left: auto;
+  }
+  &.small {
+    height: 16px;
+    .wrapper {
+      display: inline-flex;
+      align-items: center;
+      .givenName {
+        margin: 0 4px 0 0;
+      }
+    }
+  }
+}
