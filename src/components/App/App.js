@@ -1,8 +1,9 @@
 import "./App.scss";
 import React from "react";
 import Result from "../Result/Result";
-import SelectRace from "../SelectRace/SelectRace";
 import { Driver, DriverStanding } from "../DriverStanding/DriverStanding";
+import Bahrain from "../Circuits/Bahrain";
+import { GrandPrixMenu } from "../GrandPrixMenu/GrandPrixMenu";
 
 class App extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class App extends React.Component {
     this.state = {
       results: [],
     };
-    this.selectRace = this.selectRace.bind(this);
+    this.selectGP = this.selectGP.bind(this);
   }
 
   renderResults() {
@@ -31,7 +32,7 @@ class App extends React.Component {
     return <span>No results yet</span>;
   }
 
-  selectRace(race) {
+  selectGP(race) {
     var requestOptions = {
       method: "GET",
       redirect: "follow",
@@ -41,6 +42,7 @@ class App extends React.Component {
       .then((response) => response.json())
       .then((data) => {
         let results = data.MRData.RaceTable.Races;
+        console.log("a", data.MRData.RaceTable.Races[0]);
         this.setState({ results: results.length ? results[0].Results : [] });
       })
       .catch((error) => console.log("error", error));
@@ -49,10 +51,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="app font-face-roboto">
-        <div className="main"></div>
-        <SelectRace onSelectRace={this.selectRace} />
-        <h2>LeaderBoard</h2>
-        <div className="standingList">{this.renderResults()}</div>
+        <GrandPrixMenu onSelectGrandPrix={this.selectGP} />
+        <div className="main">
+          <h2>LeaderBoard</h2>
+          <div className="standingList">{this.renderResults()}</div>
+        </div>
       </div>
     );
   }

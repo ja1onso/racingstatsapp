@@ -43,7 +43,7 @@
     .position {
       margin-right: 4px;
     }
-    .givenName {
+    .familyName {
       font-family: RobotoBold;
       text-transform: uppercase;
       margin-bottom: 4px;
@@ -57,7 +57,7 @@
     .wrapper {
       display: inline-flex;
       align-items: center;
-      .givenName {
+      .familyName {
         margin: 0 4px 0 0;
       }
     }

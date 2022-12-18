@@ -1,0 +1,28 @@
+.grandprix-menu {
+  width: 240px;
+  .grandprix-menu__item {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    .marker {
+      width: 8px;
+      height: 100%;
+      background-color: #7d839c;
+      margin-right: 24px;
+    }
+    .wrapper {
+      margin-left: 16px;
+      .round {
+        font-size: 9px;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .name {
+        font-size: 11px;
+        font-family: RobotoBold;
+      }
+    }
+  }
+}

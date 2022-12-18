@@ -1,6 +1,7 @@
 .app {
   /* margin: 0 auto; */
   // max-width: 600px;
+  display: inline-flex;
 }
 .font-face-roboto {
   font-family: "RobotoRegular";
@@ -14,4 +15,6 @@
 h2 {
   font-size: 25px;
   font-family: RobotoBold;
+}
+.main {
 }

@@ -33,15 +33,15 @@ export class DriverStanding extends React.Component {
           {parseInt(this.props.result.position) > 3 && (
             <div className="position">{this.props.result.position}</div>
           )}
-          <div className="givenName">
-            {this.props.result["Driver"].givenName}
-            <span>, </span>
-          </div>
           <div className="familyName">
             {this.props.result["Driver"].familyName}
+            <span>, </span>
+          </div>
+          <div className="givenName">
+            {this.props.result["Driver"].givenName}
           </div>
         </div>
-        <span class="time">{this.renderTime()}</span>
+        <span className="time">{this.renderTime()}</span>
       </div>
     );
   }
