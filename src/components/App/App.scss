@@ -1,7 +1,45 @@
 .app {
   /* margin: 0 auto; */
   // max-width: 600px;
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "main sidebar";
+  grid-column-gap: 20px;
+  grid-row-gap: 16px;
+  color: #444;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  .main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "header header"
+      "sidebar content";
+    grid-column-gap: 20px;
+    grid-row-gap: 16px;
+    background-color: rgba(255, 255, 255, 0.05);
+    .header {
+      grid-area: header;
+      height: 48px;
+      padding-top: 40px;
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    .sidebar {
+      grid-area: sidebar;
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+    .content {
+      grid-area: content;
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+  }
+  > .sidebar {
+    padding-top: 40px;
+    grid-area: sidebar;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
 }
 .font-face-roboto {
   font-family: "RobotoRegular";
@@ -15,6 +53,4 @@
 h2 {
   font-size: 25px;
   font-family: RobotoBold;
-}
-.main {
 }

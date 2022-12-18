@@ -51,9 +51,20 @@ class App extends React.Component {
   render() {
     return (
       <div className="app font-face-roboto">
-        <GrandPrixMenu onSelectGrandPrix={this.selectGP} />
+        {/* <GrandPrixMenu onSelectGrandPrix={this.selectGP} />
         <div className="main">
           <h2>LeaderBoard</h2>
+          <div className="standingList">{this.renderResults()}</div>
+        </div> */}
+        <div className="box main">
+          <div className="header"></div>
+          <div className="sidebar">
+            <GrandPrixMenu onSelectGrandPrix={this.selectGP} />
+          </div>
+          <div className="content"></div>
+        </div>
+        <div className="box sidebar">
+          <div>LeaderBoard</div>
           <div className="standingList">{this.renderResults()}</div>
         </div>
       </div>
