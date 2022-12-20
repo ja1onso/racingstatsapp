@@ -2,14 +2,21 @@ import "./App.scss";
 import React from "react";
 import Result from "../Result/Result";
 import { Driver, DriverStanding } from "../DriverStanding/DriverStanding";
-import Bahrain from "../Circuits/Bahrain";
 import { GrandPrixMenu } from "../GrandPrixMenu/GrandPrixMenu";
+import { GpCard } from "../Cards/GpCard/GpCard";
+import { CircuitCard } from "../Cards/CircuitCard/CircuitCard";
+import { ScheduledCard } from "../Cards/ScheduleCard/ScheduledCard";
+import { GapSimulationCard } from "../Cards/GapSimulationCard/GapSimulationCard";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       results: [],
+      raceName: "N/A",
+      raceDate: "N/A",
+      raceTime: "N/A",
+      circuitName: "N/A",
     };
     this.selectGP = this.selectGP.bind(this);
   }
@@ -42,8 +49,18 @@ class App extends React.Component {
       .then((response) => response.json())
       .then((data) => {
         let results = data.MRData.RaceTable.Races;
+        let circuitName = data.MRData.RaceTable.Races[0].Circuit.circuitName;
+        let raceName = data.MRData.RaceTable.Races[0].raceName;
+        let raceDate = data.MRData.RaceTable.Races[0].date;
+        let raceTime = data.MRData.RaceTable.Races[0].time;
         console.log("a", data.MRData.RaceTable.Races[0]);
-        this.setState({ results: results.length ? results[0].Results : [] });
+        this.setState({
+          results: results.length ? results[0].Results : [],
+          raceName: raceName,
+          raceDate: raceDate,
+          raceTime: raceTime,
+          circuitName: circuitName,
+        });
       })
       .catch((error) => console.log("error", error));
   }
@@ -51,17 +68,25 @@ class App extends React.Component {
   render() {
     return (
       <div className="app font-face-roboto">
-        {/* <GrandPrixMenu onSelectGrandPrix={this.selectGP} />
-        <div className="main">
-          <h2>LeaderBoard</h2>
-          <div className="standingList">{this.renderResults()}</div>
-        </div> */}
         <div className="box main">
           <div className="header"></div>
           <div className="sidebar">
             <GrandPrixMenu onSelectGrandPrix={this.selectGP} />
           </div>
-          <div className="content"></div>
+          <div className="content">
+            <GpCard
+              circuitName={this.state.circuitName}
+              raceName={this.state.raceName}
+            />
+            <div className="wrapper">
+              <CircuitCard />
+              <ScheduledCard
+                raceDate={this.state.raceDate}
+                raceTime={this.state.raceTime}
+              />
+            </div>
+            <GapSimulationCard />
+          </div>
         </div>
         <div className="box sidebar">
           <div>LeaderBoard</div>

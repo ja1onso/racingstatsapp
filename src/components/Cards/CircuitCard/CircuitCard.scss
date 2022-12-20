@@ -1,0 +1,21 @@
+.circuitCard {
+  border: 1px solid rgb(255, 255, 255, 0.9);
+  padding: 16px 20px;
+  border-radius: 12px;
+  .circuitCard__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .turns,
+    .distance {
+      .label {
+        font-size: 11px;
+        margin-top: 16px;
+      }
+      .text {
+        font-size: 20px;
+        margin-top: 4px;
+      }
+    }
+  }
+}

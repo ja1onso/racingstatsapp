@@ -1,5 +1,6 @@
 import React from "react";
-import Bahrain from "../Circuits/Bahrain";
+import { Bahrain } from "../Circuits/Bahrain";
+import { Saudi } from "../Circuits/Saudi";
 
 import "./GrandPrixMenu.scss";
 
@@ -11,7 +12,7 @@ const options = [
   },
   {
     round: 2,
-    component: <Bahrain />,
+    component: <Saudi />,
     name: "Saudi Arabian Grand Prix",
   },
   {

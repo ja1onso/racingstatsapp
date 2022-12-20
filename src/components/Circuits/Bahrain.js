@@ -20,5 +20,3 @@ export class Bahrain extends React.Component {
     );
   }
 }
-
-export default Bahrain;
