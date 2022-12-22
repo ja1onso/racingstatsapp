@@ -1,6 +1,5 @@
 import "./App.scss";
 import React from "react";
-import Result from "../Result/Result";
 import { Driver, DriverStanding } from "../DriverStanding/DriverStanding";
 import { GrandPrixMenu } from "../GrandPrixMenu/GrandPrixMenu";
 import { GpCard } from "../Cards/GpCard/GpCard";

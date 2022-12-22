@@ -7,11 +7,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 24px;
     .info {
       font-size: 9px;
     }
   }
   .gapSimulationCard__wrapper {
-    padding: 18px;
+    display: flex;
+    justify-content: center;
   }
 }
