@@ -13,7 +13,16 @@
     }
   }
   .gapSimulationCard__wrapper {
+    align-items: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    > div {
+      margin: 16px 0;
+      button {
+        margin: 0 4px;
+      }
+    }
+    .gapSimulationCard__svg {
+    }
   }
 }
