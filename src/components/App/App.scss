@@ -19,21 +19,21 @@
       "sidebar content";
     grid-column-gap: 20px;
     grid-row-gap: 16px;
-    background-color: rgba(255, 255, 255, 0.02);
+    // background-color: rgba(255, 255, 255, 0.02);
     .header {
       grid-area: header;
       height: 48px;
       padding-top: 40px;
-      background-color: rgba(255, 255, 255, 0.05);
+      // background-color: rgba(255, 255, 255, 0.05);
     }
     .sidebar {
       grid-area: sidebar;
-      background-color: rgba(255, 255, 255, 0.05);
+      // background-color: rgba(255, 255, 255, 0.05);
       padding-top: 64px;
     }
     .content {
       grid-area: content;
-      background-color: rgba(255, 255, 255, 0.05);
+      // background-color: rgba(255, 255, 255, 0.05);
       .wrapper {
         display: flex;
         gap: 20px;
@@ -45,9 +45,9 @@
     }
   }
   > .sidebar {
-    padding-top: 40px;
+    padding: 40px 0 0 32px;
     grid-area: sidebar;
-    background-color: rgba(255, 255, 255, 0.05);
+    // background-color: rgba(255, 255, 255, 0.05);
   }
 }
 .font-face-roboto {

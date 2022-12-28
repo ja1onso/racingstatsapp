@@ -13,7 +13,7 @@ export class ScheduledCard extends React.Component {
             <div className="text">{this.props.raceDate}</div>
           </div>
           <div className="time">
-            <div className="label">Time(UTC)</div>
+            <div className="label">Time (UTC)</div>
             <div className="text">{this.props.raceTime}</div>
           </div>
         </div>

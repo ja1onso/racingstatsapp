@@ -48,16 +48,22 @@ class App extends React.Component {
       .then((response) => response.json())
       .then((data) => {
         let results = data.MRData.RaceTable.Races;
+        let circuitId = data.MRData.RaceTable.Races[0].Circuit.circuitId;
         let circuitName = data.MRData.RaceTable.Races[0].Circuit.circuitName;
         let raceName = data.MRData.RaceTable.Races[0].raceName;
         let raceDate = data.MRData.RaceTable.Races[0].date;
         let raceTime = data.MRData.RaceTable.Races[0].time;
-        console.log("a", data.MRData.RaceTable.Races[0]);
+        // console.log("a", data.MRData.RaceTable.Races[0]);
+        console.log(
+          "circuitId",
+          data.MRData.RaceTable.Races[0].Circuit.circuitId
+        );
         this.setState({
           results: results.length ? results[0].Results : [],
           raceName: raceName,
           raceDate: raceDate,
           raceTime: raceTime,
+          circuitId: circuitId,
           circuitName: circuitName,
         });
       })
@@ -74,6 +80,7 @@ class App extends React.Component {
           </div>
           <div className="content">
             <GpCard
+              circuitId={this.state.circuitId}
               circuitName={this.state.circuitName}
               raceName={this.state.raceName}
             />
@@ -88,7 +95,7 @@ class App extends React.Component {
           </div>
         </div>
         <div className="box sidebar">
-          <div>LeaderBoard</div>
+          <h2>LeaderBoard</h2>
           <div className="standingList">{this.renderResults()}</div>
         </div>
       </div>
