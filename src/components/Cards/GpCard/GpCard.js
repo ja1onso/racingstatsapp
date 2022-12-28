@@ -1,12 +1,11 @@
 import React from "react";
 
-import FlagImage from "../../FlagImage/FlagImage";
+import FlagImage from "../../FlagImageData/FlagImageData";
 
 import "./GpCard.scss";
 
 export class GpCard extends React.Component {
   render() {
-    console.log("aa", FlagImage);
     return (
       <div className="gpCard">
         <div className="suptitle">

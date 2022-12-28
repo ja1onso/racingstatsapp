@@ -1,7 +1,12 @@
 .circuitCard {
-  border: 1px solid rgb(255, 255, 255, 0.9);
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  box-shadow: 0 0px 8px -2px rgba(0, 0, 0, 0.2);
   padding: 16px 20px;
   border-radius: 12px;
+  .circuitCard__title {
+    font-size: 16px;
+    font-weight: 600;
+  }
   .circuitCard__wrapper {
     display: flex;
     align-items: center;

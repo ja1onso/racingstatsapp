@@ -1,7 +1,6 @@
 import React from "react";
-import "./Saudi.scss";
 
-export class Saudi extends React.Component {
+export class Silverstone extends React.Component {
   render() {
     return (
       <svg

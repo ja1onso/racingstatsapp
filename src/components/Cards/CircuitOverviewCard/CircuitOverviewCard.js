@@ -1,8 +1,10 @@
 import React from "react";
 
-import "./CircuitCard.scss";
+import CircuitOverviewData from "../../CircuitOverviewData/CircuitOverviewData";
 
-export class CircuitCard extends React.Component {
+import "./CircuitOverviewCard.scss";
+
+export class CircuitOverviewCard extends React.Component {
   render() {
     return (
       <div className="circuitCard">
@@ -10,11 +12,15 @@ export class CircuitCard extends React.Component {
         <div className="circuitCard__wrapper">
           <div className="turns">
             <div className="label">Turns</div>
-            <div className="text">{this.props.turns}</div>
+            <div className="text">
+              {CircuitOverviewData[this.props.circuitId]?.turns}
+            </div>
           </div>
           <div className="distance">
             <div className="label">Distance</div>
-            <div className="text">{this.props.distance}</div>
+            <div className="text">
+              {CircuitOverviewData[this.props.circuitId]?.distance}
+            </div>
           </div>
         </div>
       </div>

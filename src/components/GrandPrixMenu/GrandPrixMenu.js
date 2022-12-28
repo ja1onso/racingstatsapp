@@ -1,6 +1,6 @@
 import React from "react";
 import { Bahrain } from "../Circuits/Bahrain";
-import { Saudi } from "../Circuits/Saudi";
+import { Saudi } from "../Circuits/Jeddah";
 
 import "./GrandPrixMenu.scss";
 

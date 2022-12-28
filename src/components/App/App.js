@@ -3,7 +3,7 @@ import React from "react";
 import { Driver, DriverStanding } from "../DriverStanding/DriverStanding";
 import { GrandPrixMenu } from "../GrandPrixMenu/GrandPrixMenu";
 import { GpCard } from "../Cards/GpCard/GpCard";
-import { CircuitCard } from "../Cards/CircuitCard/CircuitCard";
+import { CircuitOverviewCard } from "../Cards/CircuitOverviewCard/CircuitOverviewCard";
 import { ScheduledCard } from "../Cards/ScheduleCard/ScheduledCard";
 import { GapSimulationCard } from "../Cards/GapSimulationCard/GapSimulationCard";
 
@@ -54,10 +54,7 @@ class App extends React.Component {
         let raceDate = data.MRData.RaceTable.Races[0].date;
         let raceTime = data.MRData.RaceTable.Races[0].time;
         // console.log("a", data.MRData.RaceTable.Races[0]);
-        console.log(
-          "circuitId",
-          data.MRData.RaceTable.Races[0].Circuit.circuitId
-        );
+        console.log(data.MRData.RaceTable.Races[0].Circuit.circuitId);
         this.setState({
           results: results.length ? results[0].Results : [],
           raceName: raceName,
@@ -85,13 +82,13 @@ class App extends React.Component {
               raceName={this.state.raceName}
             />
             <div className="wrapper">
-              <CircuitCard />
+              <CircuitOverviewCard circuitId={this.state.circuitId} />
               <ScheduledCard
                 raceDate={this.state.raceDate}
                 raceTime={this.state.raceTime}
               />
             </div>
-            <GapSimulationCard />
+            <GapSimulationCard circuitId={this.state.circuitId} />
           </div>
         </div>
         <div className="box sidebar">
