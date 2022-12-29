@@ -14,18 +14,42 @@
   .main {
     grid-area: main;
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:
       "header header"
       "sidebar content";
     grid-column-gap: 20px;
     grid-row-gap: 16px;
     // background-color: rgba(255, 255, 255, 0.02);
+    height: 100vh;
+    max-height: 100vh;
     .header {
       grid-area: header;
       height: 48px;
       padding-top: 40px;
       // background-color: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      .header__logo {
+        width: 48px;
+        height: 48px;
+        background-color: #7d839c;
+        border-radius: 50%;
+        margin: 0 24px 0 40px;
+      }
+      .header__slogan {
+        font-size: 25px;
+        margin-right: auto;
+      }
+      .header__chip {
+        background-color: #7d839c;
+        padding: 6px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+        text-transform: uppercase;
+        line-height: 1;
+        color: white;
+      }
     }
     .sidebar {
       grid-area: sidebar;
@@ -49,6 +73,8 @@
     padding: 32px 0 0 32px;
     grid-area: sidebar;
     // background-color: rgba(255, 255, 255, 0.05);
+    height: 100vh;
+    max-height: 100vh;
   }
 }
 .font-face-roboto {
@@ -62,5 +88,5 @@
 }
 h2 {
   font-size: 25px;
-  font-family: RobotoBold;
+  font-family: RobotoRegular;
 }

@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 36px;
+    margin-bottom: 16DEUSpx;
     font-size: 16px;
     font-weight: 600;
     .info {
@@ -20,13 +20,23 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    > div {
-      margin: 16px 0;
-      button {
-        margin: 0 4px;
+    svg {
+      path#track {
+        stroke: #7d839c;
+        stroke-width: 7px;
       }
-    }
-    .gapSimulationCard__svg {
+      path#s1 {
+        stroke: rgba(255, 255, 255, 0.2);
+        stroke-width: 3px;
+      }
+      path#s2 {
+        stroke: rgba(255, 255, 255, 0.5);
+        stroke-width: 3px;
+      }
+      path#s3 {
+        stroke: rgba(255, 255, 255, 0.8);
+        stroke-width: 3px;
+      }
     }
   }
 }

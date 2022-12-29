@@ -71,7 +71,13 @@ class App extends React.Component {
     return (
       <div className="app font-face-roboto">
         <div className="box main">
-          <div className="header"></div>
+          <div className="header">
+            <div className="header__logo"></div>
+            <div className="header__slogan">
+              Hi! Wellcome to Grand Prix Results
+            </div>
+            <div className="header__chip">season 2022</div>
+          </div>
           <div className="sidebar">
             <GrandPrixMenu onSelectGrandPrix={this.selectGP} />
           </div>
