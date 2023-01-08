@@ -60,6 +60,7 @@ export class GapSimulationCard extends React.Component {
         <div className="gapSimulationCard__wrapper">
           {trackComponentMapping[this.props.circuitId]}
         </div>
+        <div className="gapSimulationCard__footer">assssssssssssssssss</div>
       </div>
     );
   }
